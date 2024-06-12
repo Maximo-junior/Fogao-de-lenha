@@ -1,0 +1,125 @@
+$font-family_1: 'Open Sans', sans-serif;
+$background-color_1: #e44d4d21;
+$background-color_2: rgba(114, 73, 73, 0.295);
+$background-color_3: #ffffff;
+
+body {
+	margin: 0;
+	font-family: $font-family_1;
+	background-color: $background-color_1;
+}
+main {
+	>section.items {
+		h4 {
+			text-align: center;
+			margin-top: 0;
+			width: 100%;
+		}
+		display: flex;
+		flex-wrap: wrap;
+		padding: 20px;
+		max-width: 700px;
+		min-width: 500px;
+		justify-content: center;
+	}
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding-top: 20px;
+}
+section.items {
+	.product {
+		border: 1px solid rgba(253, 77, 77, 0.253);
+		margin: 6px;
+		flex: 0 0 calc(33.333% - 24px);
+		cursor: pointer;
+		text-align: center;
+		transition: transform 0.3s ease;
+		border-radius: 10px;
+		&:hover {
+			transform: translateY(-5px);
+		}
+	}
+	.product.selected {
+		border: 2px solid rgb(29, 134, 233);
+	}
+	.photo {
+		img {
+			max-width: 120px;
+		}
+	}
+	.description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 10px;
+		background-color: $background-color_2;
+		border: 1px solid rgb(196, 72, 72);
+		border-top: none;
+		.price {
+			font-weight: bold;
+			margin: 4px auto;
+		}
+		.quantity-area {
+			margin: 8px auto;
+			height: 14px;
+			button {
+				width: 16px;
+				height: 16px;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+			.quantity {
+				font-weight: bold;
+				margin: 0 4px;
+			}
+		}
+	}
+}
+section.summary {
+	background-color: $background-color_3;
+	padding: 20px;
+	min-height: 200px;
+	min-width: 200px;
+	text-align: left;
+	border: 1px solid #4980e7;
+	position: sticky;
+	top: 20px;
+	z-index: 999;
+	border-radius: 10px;
+	table {
+		width: 100%;
+		font-size: 14px;
+		border-collapse: collapse;
+		th {
+			padding: 8px;
+			border-bottom: 1px solid #ec0000;
+			text-align: left;
+			font-weight: bold;
+		}
+		td {
+			padding: 8px;
+			border-bottom: 1px solid #ec0000;
+		}
+		tbody {
+			tr {
+				&:last-of-type {
+					th {
+						border-top: 2px solid #0155d4;
+					}
+				}
+			}
+		}
+	}
+	.total {
+		font-size: 16px;
+		font-weight: bold;
+		margin-top: 10px;
+	}
+}

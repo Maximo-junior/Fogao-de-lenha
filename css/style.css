@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(228, 77, 77, 0.1294117647);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+main > section.items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 700px;
+  min-width: 500px;
+  justify-content: center;
+}
+main > section.items h4 {
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+}
+
+section.items .product {
+  border: 1px solid rgba(253, 77, 77, 0.253);
+  margin: 6px;
+  flex: 0 0 calc(33.333% - 24px);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+section.items .product:hover {
+  transform: translateY(-5px);
+}
+section.items .product.selected {
+  border: 2px solid rgb(29, 134, 233);
+}
+section.items .photo img {
+  max-width: 120px;
+}
+section.items .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px;
+  background-color: rgba(114, 73, 73, 0.295);
+  border: 1px solid rgb(196, 72, 72);
+  border-top: none;
+}
+section.items .description .price {
+  font-weight: bold;
+  margin: 4px auto;
+}
+section.items .description .quantity-area {
+  margin: 8px auto;
+  height: 14px;
+}
+section.items .description .quantity-area button {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+section.items .description .quantity-area .quantity {
+  font-weight: bold;
+  margin: 0 4px;
+}
+
+section.summary {
+  background-color: #ffffff;
+  padding: 20px;
+  min-height: 200px;
+  min-width: 200px;
+  text-align: left;
+  border: 1px solid #4980e7;
+  position: sticky;
+  top: 20px;
+  z-index: 999;
+  border-radius: 10px;
+}
+section.summary table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+section.summary table th {
+  padding: 8px;
+  border-bottom: 1px solid #ec0000;
+  text-align: left;
+  font-weight: bold;
+}
+section.summary table td {
+  padding: 8px;
+  border-bottom: 1px solid #ec0000;
+}
+section.summary table tbody tr:last-of-type th {
+  border-top: 2px solid #0155d4;
+}
+section.summary .total {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
